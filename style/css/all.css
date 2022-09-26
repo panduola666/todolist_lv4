@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.bg {
+  min-height: 100vh;
+  background: linear-gradient(172.7deg, #FFD370 5.12%, #FFD370 53.33%, #FFD370 53.44%, #FFFFFF 53.45%, #FFFFFF 94.32%);
+}
+@media screen and (max-width: 375px) {
+  .bg {
+    background: none;
+    background-color: #FFD370;
+  }
+}
+
+.full {
+  background-color: #FFD370;
+}
+
+h1 {
+  margin-bottom: 0.8rem;
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  color: #333;
+}
+
+h2 {
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #333;
+}
+
+h3 {
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #333;
+}
+h3.signOut {
+  font-weight: 400;
+}
+@media screen and (max-width: 375px) {
+  h3.signOut {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+h6 {
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #D87355;
+}
+
+p {
+  font-family: "Noto Sans TC";
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #333;
+}
+p.fw700 {
+  font-weight: 700;
+  color: #9F9A91;
+}
+p.clearAll {
+  color: #9F9A91;
+}
+
+a, button {
+  text-decoration: none;
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  padding: 1.2rem 0;
+  text-align: center;
+  background-color: #333;
+  border-radius: 1rem;
+  color: #fff;
+  width: 16rem;
+  height: 4.7rem;
+}
+button.signIn {
+  width: 130px;
+}
+
+input {
+  padding: 1.2rem 1.6rem;
+  width: 30rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  font-family: "Noto Sans TC";
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  color: #333;
+}
+input::-moz-placeholder {
+  color: #9F9A91;
+}
+input:-ms-input-placeholder {
+  color: #9F9A91;
+}
+input::placeholder {
+  color: #9F9A91;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+@media screen and (max-width: 375px) {
+  .wrap {
+    flex-direction: column;
+  }
+}
+.wrap div.left img {
+  display: block;
+  margin: 0 auto 2rem;
+}
+@media screen and (max-width: 375px) {
+  .wrap div.left img.image {
+    display: none;
+  }
+}
+.wrap div.right {
+  margin-left: 10.2140077821vw;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 375px) {
+  .wrap div.right {
+    margin-left: 0;
+  }
+  .wrap div.right h1 {
+    text-align: center;
+  }
+  .wrap div.right h1.index_title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+.wrap div.right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap div.right form label {
+  margin-top: 1.6rem;
+}
+.wrap div.right form label input {
+  margin: 0.5rem 0;
+}
+.wrap div.right form label h6 {
+  margin-bottom: 1.5rem;
+}
+.wrap div.right form button {
+  margin: 1.6rem 0 2.4rem;
+}
+@media screen and (max-width: 375px) {
+  .wrap div.right form button {
+    margin-top: 2rem;
+  }
+}
+.wrap div.right a, .wrap div.right button {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3.3rem;
+}
+@media screen and (max-width: 375px) {
+  header {
+    padding: 2rem 0;
+    justify-content: space-evenly;
+  }
+  header section.right h3 {
+    display: none;
+  }
+  header section.right h3.signOut {
+    display: block;
+    margin-left: 0rem;
+  }
+}
+header section.right {
+  display: flex;
+  flex-shrink: 0;
+}
+header section.right h3 {
+  margin-left: 2.4rem;
+}
+header section.right h3.signOut {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+main div.top {
+  margin-bottom: 1.6rem;
+  position: relative;
+  width: 500px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 375px) {
+  main div.top {
+    width: 31rem;
+  }
+}
+main div.top input[type=text] {
+  width: 100%;
+}
+main div.top input[type=button] {
+  cursor: pointer;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  padding: 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+}
+main div.todolist {
+  width: 50rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 375px) {
+  main div.todolist {
+    width: 31rem;
+  }
+}
+main div.todolist nav {
+  display: flex;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+main div.todolist nav section {
+  cursor: pointer;
+  flex-grow: 1;
+  height: 5rem;
+}
+main div.todolist nav section p {
+  pointer-events: none;
+  line-height: 5rem;
+}
+main div.todolist nav section.active {
+  border-bottom: 2px solid #333;
+}
+main div.todolist nav section.active p {
+  color: #333;
+}
+main div.todolist ul {
+  list-style: none;
+}
+main div.todolist ul li {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+main div.todolist ul li:hover div.deleteTODO {
+  display: block;
+}
+main div.todolist ul li label {
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  border-bottom: 1px solid #E5E5E5;
+}
+main div.todolist ul li label input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+main div.todolist ul li label input[type=checkbox]:checked ~ p {
+  text-decoration: line-through;
+  color: #9F9A91;
+}
+main div.todolist ul li label input[type=checkbox]:checked ~ p::before {
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+main div.todolist ul li label input[type=checkbox]:checked ~ p::after {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+main div.todolist ul li label p {
+  width: 100%;
+  padding-left: 3.6rem;
+}
+main div.todolist ul li label p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1.5rem;
+  border: 1px solid #9F9A91;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  width: 2rem;
+  height: 2rem;
+}
+main div.todolist ul li label p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1.5rem;
+  border-bottom: 2px solid #FFD370;
+  border-right: 2px solid #FFD370;
+  transform: rotate(45deg) translate(0, -0.5rem);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  width: 1rem;
+  height: 2rem;
+}
+main div.todolist ul li div.deleteTODO {
+  display: none;
+  width: 10%;
+  text-align: center;
+  cursor: pointer;
+}
+main div.todolist ul li div.deleteTODO i {
+  pointer-events: none;
+}
+main div.todolist section.bottom {
+  padding: 2.5rem 4.8rem 3.2rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+main div.todolist section.bottom p.clearAll {
+  cursor: pointer;
+}
+main div.finish {
+  display: none;
+  position: absolute;
+  top: 20rem;
+  left: 50% -clac(240/2);
+  text-align: center;
+}
+main div.finish h3 {
+  margin-bottom: 1.6rem;
+  font-weight: 400;
+}/*# sourceMappingURL=all.css.map */

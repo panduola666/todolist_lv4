@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>內頁</title>
+</head>
+
+<body>
+    <div class="bg">
+        <header>
+            <img src="./style/images/logo_lg.png" alt="LOGO">
+            <section class="right">
+                <h3><span>王小明</span>的代辦</h3>
+                <h3 class="signOut">登出</h3>
+            </section>
+        </header>
+
+        <main>
+            <div class="top">
+                <label>
+                    <input type="text" name="" placeholder="新增待辦事項" class="TODO_content">
+                </label>
+                <input type="button" value="+" class="addTODO">
+
+            </div>
+            <div class="todolist">
+                <nav>
+                    <section class="active">
+                        <p class="fw700">全部</ㄣ>
+                    </section>
+                    <section>
+                        <p class="fw700">待完成</ㄣ>
+                    </section>
+                    <section>
+                        <p class="fw700">已完成</ㄣ>
+                    </section>
+                </nav>
+                <ul>
+                </ul>
+                <section class="bottom">
+                    <p><span>5</span>個待完成項目</p>
+                    <p class="clearAll">清除已完成項目</p>
+                </section>
+            </div>
+            <div class="finish">
+                <h3>目前尚無待辦事項</h3>
+                <img src="./style/images/empty 1.png" alt="無待辦事項">
+            </div>
+        </main>
+    </div>
+    <script src="./style/js/todolist.js"></script>
+</body>
+
+</html>

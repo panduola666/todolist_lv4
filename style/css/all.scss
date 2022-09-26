@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+$bgc:#FFD370;
+$font:#333;
+$gray:#9F9A91;
+$font_white:#fff;
+$baseWidth:1028px;
+@function pxTovw($px){
+    @return calc($px/$baseWidth)*100vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+.bg{
+    min-height: 100vh;
+    background: linear-gradient(
+        172.7deg,
+        #FFD370 5.12%,
+        #FFD370 53.33%, 
+        #FFD370 53.44%, 
+        #FFFFFF 53.45%, 
+        #FFFFFF 94.32%);
+    @media screen and (max-width:375px){
+       background: none;
+        background-color: $bgc;
+    }
+}
+.full{
+    background-color: $bgc;
+}
+
+h1{
+    margin-bottom: .8rem;
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    color: $font;
+}
+h2{
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $font;
+}
+h3{
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color: $font;
+    &.signOut{
+        font-weight: 400;
+        @media screen and (max-width:375px){
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+}
+h6{
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color:#D87355;
+}
+p{
+    font-family: 'Noto Sans TC';
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $font;
+    &.fw700{
+        font-weight: 700;
+        color: $gray;
+    }
+    &.clearAll{
+        color: $gray;
+    }
+}
+a{
+    text-decoration: none;
+    font-family: 'Noto Sans TC';
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color: $font;
+}
+button{
+    @extend a;
+    cursor: pointer;
+    padding: 1.2rem 0;
+    text-align: center;
+    background-color: $font;
+    border-radius: 1rem;
+    color: $font_white;
+    width:16rem;
+    height:4.7rem;
+    &.signIn{
+        width: 130px;
+    }
+}
+input{
+    padding: 1.2rem 1.6rem;
+    width: 30rem;
+    height: 5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    font-family: 'Noto Sans TC';
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color: $font;
+    &::placeholder{
+        color: $gray;
+    }
+}
+//開始代碼
+.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    @media screen and (max-width:375px) {
+        flex-direction: column;
+    }
+    div.left{
+        img{
+            display: block;
+            margin: 0 auto 2rem;
+        }
+        @media screen and (max-width:375px) {
+            img.image{
+                display: none;
+            }
+        }
+    }
+    div.right{
+        margin-left: pxTovw(105px);
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width:375px) {
+            margin-left: 0;
+            h1{
+                text-align: center;
+                &.index_title{
+                    font-size: 2rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            label{
+                margin-top: 1.6rem;
+                input{
+                    margin: .5rem 0;
+                }
+                h6{
+                    margin-bottom: 1.5rem;
+                }
+            }
+            button{
+               margin: 1.6rem 0 2.4rem;
+                @media screen and (max-width:375px) {
+                    margin-top: 2rem;
+                }
+            }
+        }
+       a{
+        text-align: center;
+       }
+    }
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 3.3rem;
+    @media screen and (max-width:375px){
+        padding: 2rem 0;
+        justify-content: space-evenly;
+        section.right{
+            h3{
+            display: none;
+            &.signOut{
+                display: block;
+                margin-left: 0rem;
+            }
+        }
+    }
+    }
+    section.right{
+        display: flex;
+        flex-shrink: 0;
+        h3{
+            margin-left: 2.4rem;
+            &.signOut{
+            cursor: pointer;
+            }
+        }
+
+
+
+    }
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    div.top{
+        margin-bottom: 1.6rem;
+        position: relative;
+        width: 500px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        @media screen and (max-width:375px){
+            width: 31rem;
+        }
+        input[type="text"]{
+            width:100%;
+        }
+        input[type="button"]{
+            cursor: pointer;
+            position: absolute;
+            right: .4rem;
+            top: 0.4rem;
+            padding: 0;
+            background-color: $font;
+            color: $font_white;
+            font-size: 2rem;
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    div.todolist{
+        width: 50rem;
+        background-color: $font_white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        @media screen and (max-width:375px){
+            width:31rem
+        }
+        nav{
+            display: flex;
+            text-align: center;
+            margin-bottom: .6rem;
+            section{
+                cursor: pointer;
+                flex-grow: 1;
+                height: 5rem;
+                p{
+                    pointer-events: none;
+                    line-height: 5rem;
+                }
+                &.active{
+                    p{
+                        color: $font;
+                    }
+                    border-bottom: 2px solid $font;
+                }
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                display: flex;
+                align-items: center;
+                width: 90%;
+                margin: 0 auto;
+                &:hover{
+                    div.deleteTODO{
+                        display: block;
+                    }
+                }
+                label{
+                    position: relative;
+                    width: 90%;
+                    display: flex;
+                    align-items: center;
+                    height: 5rem;
+                    border-bottom: 1px solid #E5E5E5;
+                    input[type="checkbox"]{
+                        position: absolute;
+                        cursor: pointer;
+                        opacity: 0;
+                        flex-shrink: 0;
+                        width: 100%;
+                            &:checked{
+                                ~p{
+                                    text-decoration: line-through;
+                                    color: $gray;
+                                }
+                                ~p::before{
+                                    transform:scale(0);
+                                    transition: all .3s ease;
+                                }
+                                ~p::after{
+                                    opacity: 1;
+                                    transition: all .3s ease;
+                                }
+                            }
+                    }
+                    p{
+                        width: 100%;
+                        padding-left: 3.6rem;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            left: 0;      
+                            bottom: 1.5rem;
+                            border: 1px solid $gray;
+                            border-radius: 5px;
+                            transform:scale(1);
+                            transition: all .3s ease;
+                            pointer-events: none;
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 1.5rem;
+                            border-bottom: 2px solid $bgc;   
+                            border-right: 2px solid $bgc;
+                            transform: rotate(45deg) translate(0,-.5rem);
+                            opacity: 0;
+                            transition: all .3s ease;
+                            pointer-events: none;
+                            width: 1rem;
+                            height: 2rem;
+                        }
+
+                        
+                    }
+                
+                }
+                div.deleteTODO{
+                    display: none;
+                    width: 10%;
+                    text-align: center;
+                    cursor: pointer;
+                    i{
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+        section.bottom{
+            padding: 2.5rem 4.8rem 3.2rem 2.4rem;
+            display: flex;
+            justify-content: space-between;
+            p.clearAll{
+                cursor: pointer;
+            }
+        }
+    }
+    div.finish{
+        //無代辦事項
+        display: none;
+        position: absolute;
+        top: 20rem;
+        left: 50%-clac(240/2);
+        text-align: center;
+        h3{
+            margin-bottom: 1.6rem;
+            font-weight: 400;
+        }
+    }
+}
